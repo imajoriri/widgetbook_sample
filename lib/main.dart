@@ -16,7 +16,25 @@ class WidgetbookApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Widgetbook.material(
       directories: directories,
-      addons: const [],
+      addons: [
+        DeviceFrameAddon(devices: Devices.ios.all),
+        MaterialThemeAddon(
+          themes: [
+            WidgetbookTheme(
+              name: 'Light',
+              data: ThemeData.light(),
+            ),
+            WidgetbookTheme(
+              name: 'Dark',
+              data: ThemeData.dark(),
+            ),
+          ],
+          initialTheme: WidgetbookTheme(
+            name: 'Light',
+            data: ThemeData.light(),
+          ),
+        ),
+      ],
       integrations: [
         WidgetbookCloudIntegration(),
       ],

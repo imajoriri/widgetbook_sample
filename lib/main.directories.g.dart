@@ -10,5 +10,19 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:widgetbook/widgetbook.dart' as _i1;
+import 'package:widgetbook_sample/conmponent/button.dart' as _i2;
 
-final directories = <_i1.WidgetbookNode>[];
+final directories = <_i1.WidgetbookNode>[
+  _i1.WidgetbookFolder(
+    name: 'material',
+    children: [
+      _i1.WidgetbookLeafComponent(
+        name: 'FilledButton',
+        useCase: _i1.WidgetbookUseCase(
+          name: 'FilledButton',
+          builder: _i2.filledButtonUseCase,
+        ),
+      )
+    ],
+  )
+];
