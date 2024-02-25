@@ -30,7 +30,6 @@ jobs:
       # --base-hrefには、リポジトリ名
       - name: build web
         run: |
-          cd snkrdunk_design/widgetbook
           flutter build web --base-href=/${{ github.repository }}/
 
       # github pagesにデプロイ
