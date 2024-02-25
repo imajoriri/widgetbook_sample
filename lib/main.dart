@@ -18,6 +18,13 @@ class WidgetbookApp extends StatelessWidget {
       directories: directories,
       addons: [
         DeviceFrameAddon(devices: Devices.ios.all),
+        AlignmentAddon(
+          initialAlignment: Alignment.center,
+        ),
+        TextScaleAddon(
+          scales: [1.0, 1.2, 1.4, 1.6, 1.8, 2.0],
+        ),
+        InspectorAddon(enabled: true),
         MaterialThemeAddon(
           themes: [
             WidgetbookTheme(
