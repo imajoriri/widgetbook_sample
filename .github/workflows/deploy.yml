@@ -31,7 +31,7 @@ jobs:
       # --base-hrefには、リポジトリ名
       - name: build web
         run: |
-          flutter build web --base-href=/${{ github.repository }}/
+          flutter build web --base-href=/widgetbook_sample/
 
       - uses: actions/upload-pages-artifact@v1
         with:
