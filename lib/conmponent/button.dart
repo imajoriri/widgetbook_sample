@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(
@@ -7,16 +6,15 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
   type: FilledButton,
 )
 Widget filledButtonUseCase(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(16),
+  return Container(
+    padding: const EdgeInsets.only(top: 100),
+    width: double.infinity,
+    alignment: Alignment.center,
     child: Column(
       children: [
         FilledButton(
           onPressed: () {},
-          child: Text(context.knobs.string(
-            label: 'Title',
-            initialValue: 'Title',
-          )),
+          child: const Text("Enabled"),
         ),
         const SizedBox(height: 16),
         const FilledButton(
